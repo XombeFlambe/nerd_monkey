@@ -1,0 +1,300 @@
+The file will have its original line endings in your working directory.
+
+nlevine@NLEVINE-WIN7 /c/LocalBuilds/MiracleEar/_static/src (feature/feed-7-31)
+$ git commit -m "fixing myaccount html"
+[feature/feed-7-31 warning: LF will be replaced by CRLF in _static/src/assets/scripts/views/DropdownView.js.
+The file will have its original line endings in your working directory.
+b6c7448] fixing myaccount html
+warning: LF will be replaced by CRLF in _static/src/assets/scripts/views/DropdownView.js.
+The file will have its original line endings in your working directory.
+ 3 files changed, 34 insertions(+), 20 deletions(-)
+
+nlevine@NLEVINE-WIN7 /c/LocalBuilds/MiracleEar/_static/src (feature/feed-7-31)
+$ git push origin feature/feed-7-31
+Username for 'https://git.nerderylabs.com': nlevine
+Password for 'https://nlevine@git.nerderylabs.com':
+Counting objects: 92, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (25/25), 2.67 KiB | 0 bytes/s, done.
+Total 25 (delta 16), reused 0 (delta 0)
+To https://git.nerderylabs.com/MIRACLEEAR.MECOM
+   337a0f3..b6c7448  feature/feed-7-31 -> feature/feed-7-31
+
+nlevine@NLEVINE-WIN7 /c/LocalBuilds/MiracleEar/_static/src (feature/feed-7-31)
+$ cd c:
+
+nlevine@NLEVINE-WIN7 /c
+$ cd Projects/
+
+nlevine@NLEVINE-WIN7 /c/Projects
+$ ls
+nerd_monkey  nerd_restaurant  nerdarama
+
+nlevine@NLEVINE-WIN7 /c/Projects
+$ cd nerd_monkey
+
+nlevine@NLEVINE-WIN7 /c/Projects/nerd_monkey (develop)
+$ ls
+Gemfile       Procfile     Rakefile     app  config     db   log     puppet  tmp
+Gemfile.lock  README.rdoc  Vagrantfile  bin  config.ru  lib  public  test    vendor
+
+nlevine@NLEVINE-WIN7 /c/Projects/nerd_monkey (develop)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 5000 => 5000 (adapter 1)
+    default: 80 => 8080 (adapter 1)
+    default: 22 => 2222 (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+==> default: Setting hostname...
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Projects/nerd_monkey
+    default: /tmp/vagrant-puppet-5/manifests => C:/Projects/nerd_monkey/puppet/manifests
+    default: /tmp/vagrant-puppet-5/modules-0 => C:/Projects/nerd_monkey/puppet/modules
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: to force provisioning. Provisioners marked to run always will still run.
+
+nlevine@NLEVINE-WIN7 /c/Projects/nerd_monkey (develop)
+$ vagrant ssh
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Jul 31 17:09:22 CDT 2014
+
+  System load:  0.62              Processes:           92
+  Usage of /:   6.1% of 39.34GB   Users logged in:     0
+  Memory usage: 9%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+Last login: Mon Jul 21 12:25:25 2014 from 10.0.2.2
+vagrant@nerd-monkey:~$ rails generate scaffold MenuItem title:string price:decimal description:text
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+  -r, [--ruby=PATH]                                      # Path to the Ruby binary of your choice
+                                                         # Default: /opt/rubies/ruby-2.1.2/bin/ruby
+  -m, [--template=TEMPLATE]                              # Path to some application template (can be a filesystem path o
+r URL)
+      [--skip-gemfile], [--no-skip-gemfile]              # Don't create a Gemfile
+  -B, [--skip-bundle], [--no-skip-bundle]                # Don't run bundle install
+  -G, [--skip-git], [--no-skip-git]                      # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                  # Skip source control .keep files
+  -O, [--skip-active-record], [--no-skip-active-record]  # Skip Active Record files
+  -V, [--skip-action-view], [--no-skip-action-view]      # Skip Action View files
+  -S, [--skip-sprockets], [--no-skip-sprockets]          # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                # Don't install Spring application preloader
+  -d, [--database=DATABASE]                              # Preconfigure for selected database (options: mysql/oracle/pos
+tgresql/sqlite3/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                         # Default: sqlite3
+  -j, [--javascript=JAVASCRIPT]                          # Preconfigure for selected JavaScript library
+                                                         # Default: jquery
+  -J, [--skip-javascript], [--no-skip-javascript]        # Skip JavaScript files
+      [--dev], [--no-dev]                                # Setup the application with Gemfile pointing to your Rails che
+ckout
+      [--edge], [--no-edge]                              # Setup the application with Gemfile pointing to Rails reposito
+ry
+  -T, [--skip-test-unit], [--no-skip-test-unit]          # Skip Test::Unit files
+      [--rc=RC]                                          # Path to file containing extra configuration options for rails
+ command
+      [--no-rc], [--no-no-rc]                            # Skip loading of extra configuration options from .railsrc fil
+e
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+    See the README in the newly created application to get going.
+vagrant@nerd-monkey:~$ ls
+bin  nerd_monkey  README.md  src
+vagrant@nerd-monkey:~$ cd nerd_monkey
+vagrant@nerd-monkey:~/nerd_monkey[develop*]$ rails generate scaffold MenuItem title:string price:decimal description:te
+xt
+      invoke  active_record
+      create    db/migrate/20140731222111_create_menu_items.rb
+      create    app/models/menu_item.rb
+      invoke    test_unit
+      create      test/models/menu_item_test.rb
+      create      test/fixtures/menu_items.yml
+      invoke  resource_route
+       route    resources :menu_items
+      invoke  scaffold_controller
+      create    app/controllers/menu_items_controller.rb
+      invoke    erb
+      create      app/views/menu_items
+      create      app/views/menu_items/index.html.erb
+      create      app/views/menu_items/edit.html.erb
+      create      app/views/menu_items/show.html.erb
+      create      app/views/menu_items/new.html.erb
+      create      app/views/menu_items/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/menu_items_controller_test.rb
+      invoke    helper
+      create      app/helpers/menu_items_helper.rb
+      invoke      test_unit
+      create        test/helpers/menu_items_helper_test.rb
+      invoke    jbuilder
+      create      app/views/menu_items/index.json.jbuilder
+      create      app/views/menu_items/show.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/menu_items.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/menu_items.css.scss
+      invoke  scss
+   identical    app/assets/stylesheets/scaffolds.css.scss
+vagrant@nerd-monkey:~/nerd_monkey[develop*]$ rake db:migrate
+== 20140731222111 CreateMenuItems: migrating ==================================
+-- create_table(:menu_items)
+   -> 0.0953s
+== 20140731222111 CreateMenuItems: migrated (0.0961s) =========================
+
+vagrant@nerd-monkey:~/nerd_monkey[develop*]$ rails console
+Loading development environment (Rails 4.1.4)
+irb(main):001:0> m = MenuItem.new
+=> #<MenuItem id: nil, title: nil, price: nil, description: nil, created_at: nil, updated_at: nil>
+irb(main):002:0> m.title="Hot Dog"
+=> "Hot Dog"
+irb(main):003:0> m
+=> #<MenuItem id: nil, title: "Hot Dog", price: nil, description: nil, created_at: nil, updated_at: nil>
+irb(main):004:0> m.price="green"
+=> "green"
+irb(main):005:0> m
+=> #<MenuItem id: nil, title: "Hot Dog", price: #<BigDecimal:7f88833af530,'0.0',9(9)>, description: nil, created_at: nil
+, updated_at: nil>
+irb(main):006:0> m.price="1.99"
+=> "1.99"
+irb(main):007:0> m
+=> #<MenuItem id: nil, title: "Hot Dog", price: #<BigDecimal:7f88833b65b0,'0.199E1',18(18)>, description: nil, created_a
+t: nil, updated_at: nil>
+irb(main):008:0> m.description="tasty, tasty doggies."
+=> "tasty, tasty doggies."
+irb(main):009:0> m
+=> #<MenuItem id: nil, title: "Hot Dog", price: #<BigDecimal:7f88833b65b0,'0.199E1',18(18)>, description: "tasty, tasty
+doggies.", created_at: nil, updated_at: nil>
+irb(main):010:0> m.save
+   (0.3ms)  BEGIN
+  SQL (1.2ms)  INSERT INTO "menu_items" ("created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3
+, $4, $5) RETURNING "id"  [["created_at", "2014-07-31 22:35:23.195292"], ["description", "tasty, tasty doggies."], ["pri
+ce", "1.99"], ["title", "Hot Dog"], ["updated_at", "2014-07-31 22:35:23.195292"]]
+   (0.9ms)  COMMIT
+=> true
+irb(main):011:0> m1 = MenuItem.new(title:"Cabbage", price:"5.00", description:"it's green and purple.")
+=> #<MenuItem id: nil, title: "Cabbage", price: #<BigDecimal:7f888343f4a0,'0.5E1',9(18)>, description: "it's green and p
+urple.", created_at: nil, updated_at: nil>
+irb(main):012:0> m1
+=> #<MenuItem id: nil, title: "Cabbage", price: #<BigDecimal:7f888343f4a0,'0.5E1',9(18)>, description: "it's green and p
+urple.", created_at: nil, updated_at: nil>
+irb(main):013:0> m1.save
+   (0.3ms)  BEGIN
+  SQL (0.7ms)  INSERT INTO "menu_items" ("created_at", "description", "price", "title", "updated_at") VALUES ($1, $2, $3
+, $4, $5) RETURNING "id"  [["created_at", "2014-07-31 22:37:54.450219"], ["description", "it's green and purple."], ["pr
+ice", "5.0"], ["title", "Cabbage"], ["updated_at", "2014-07-31 22:37:54.450219"]]
+   (1.6ms)  COMMIT
+=> true
+irb(main):014:0> MenuItem.all
+  MenuItem Load (0.7ms)  SELECT "menu_items".* FROM "menu_items"
+=> #<ActiveRecord::Relation [#<MenuItem id: 1, title: "Hot Dog", price: #<BigDecimal:7f888347bc98,'0.199E1',18(18)>, des
+cription: "tasty, tasty doggies.", created_at: "2014-07-31 22:35:23", updated_at: "2014-07-31 22:35:23">, #<MenuItem id:
+ 2, title: "Cabbage", price: #<BigDecimal:7f888347af50,'0.5E1',9(18)>, description: "it's green and purple.", created_at
+: "2014-07-31 22:37:54", updated_at: "2014-07-31 22:37:54">, #<MenuItem id: 3, title: "Pineapple", price: #<BigDecimal:7
+f888347a258,'0.499E1',18(18)>, description: "Pineaplle express was a funny movie.", created_at: "2014-07-31 22:38:57", u
+pdated_at: "2014-07-31 22:38:57">]>
+irb(main):015:0> MenuItem.find "3"
+  MenuItem Load (0.5ms)  SELECT  "menu_items".* FROM "menu_items"  WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 3]]
+=> #<MenuItem id: 3, title: "Pineapple", price: #<BigDecimal:7f88834877a0,'0.499E1',18(18)>, description: "Pineaplle exp
+ress was a funny movie.", created_at: "2014-07-31 22:38:57", updated_at: "2014-07-31 22:38:57">
+irb(main):016:0> MenuItem.where("price > 2").order("price desc")
+  MenuItem Load (2.2ms)  SELECT "menu_items".* FROM "menu_items"  WHERE (price > 2)  ORDER BY price desc
+=> #<ActiveRecord::Relation [#<MenuItem id: 2, title: "Cabbage", price: #<BigDecimal:7f8883491de0,'0.5E1',9(18)>, descri
+ption: "it's green and purple.", created_at: "2014-07-31 22:37:54", updated_at: "2014-07-31 22:37:54">, #<MenuItem id: 3
+, title: "Pineapple", price: #<BigDecimal:7f88834910e8,'0.499E1',18(18)>, description: "Pineaplle express was a funny mo
+vie.", created_at: "2014-07-31 22:38:57", updated_at: "2014-07-31 22:38:57">]>
+irb(main):017:0> MenuItem.all
+  MenuItem Load (0.7ms)  SELECT "menu_items".* FROM "menu_items"
+=> #<ActiveRecord::Relation [#<MenuItem id: 1, title: "Hot Dog", price: #<BigDecimal:7f88834a34c8,'0.199E1',18(18)>, des
+cription: "tasty, tasty doggies.", created_at: "2014-07-31 22:35:23", updated_at: "2014-07-31 22:35:23">, #<MenuItem id:
+ 2, title: "Cabbage", price: #<BigDecimal:7f88834a27d0,'0.5E1',9(18)>, description: "it's green and purple.", created_at
+: "2014-07-31 22:37:54", updated_at: "2014-07-31 22:37:54">, #<MenuItem id: 3, title: "Pineapple", price: #<BigDecimal:7
+f88834a1ad8,'0.499E1',18(18)>, description: "Pineaplle express was a funny movie.", created_at: "2014-07-31 22:38:57", u
+pdated_at: "2014-07-31 22:38:57">, #<MenuItem id: 4, title: "fffff", price: #<BigDecimal:7f88834a0de0,'0.1E3',9(18)>, de
+scription: "", created_at: "2014-07-31 23:31:33", updated_at: "2014-07-31 23:31:33">]>
+irb(main):018:0> MenuItem.find 4
+  MenuItem Load (0.6ms)  SELECT  "menu_items".* FROM "menu_items"  WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 4]]
+=> #<MenuItem id: 4, title: "fffff", price: #<BigDecimal:7f88834b2ce8,'0.1E3',9(18)>, description: "", created_at: "2014
+-07-31 23:31:33", updated_at: "2014-07-31 23:31:33">
+irb(main):019:0> delete
+NameError: undefined local variable or method `delete' for main:Object
+        from (irb):19
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/console.rb:90:in `start'
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/console.rb:9:in `start'
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/commands_tasks.rb:69:in `console'
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands.rb:17:in `<top (required)>'
+        from bin/rails:4:in `require'
+        from bin/rails:4:in `<main>'
+irb(main):020:0> MenuItem.remove
+NoMethodError: undefined method `remove' for #<Class:0x007f888303a710>
+        from /home/vagrant/.gem/ruby/2.1.2/gems/activerecord-4.1.4/lib/active_record/dynamic_matchers.rb:26:in `method_m
+issing'
+        from (irb):20
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/console.rb:90:in `start'
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/console.rb:9:in `start'
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/commands_tasks.rb:69:in `console'
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+
+        from /home/vagrant/.gem/ruby/2.1.2/gems/railties-4.1.4/lib/rails/commands.rb:17:in `<top (required)>'
+        from bin/rails:4:in `require'
+        from bin/rails:4:in `<main>'
+irb(main):021:0> MenuItem.all
+  MenuItem Load (0.7ms)  SELECT "menu_items".* FROM "menu_items"
+=> #<ActiveRecord::Relation [#<MenuItem id: 1, title: "Hot Dog", price: #<BigDecimal:7f88834c9c40,'0.199E1',18(18)>, des
+cription: "tasty, tasty doggies.", created_at: "2014-07-31 22:35:23", updated_at: "2014-07-31 22:35:23">, #<MenuItem id:
+ 2, title: "Cabbage", price: #<BigDecimal:7f88834c8f48,'0.5E1',9(18)>, description: "it's green and purple.", created_at
+: "2014-07-31 22:37:54", updated_at: "2014-07-31 22:37:54">, #<MenuItem id: 3, title: "Pineapple", price: #<BigDecimal:7
+f88834c8250,'0.499E1',18(18)>, description: "Pineaplle express was a funny movie.", created_at: "2014-07-31 22:38:57", u
+pdated_at: "2014-07-31 22:38:57">, #<MenuItem id: 5, title: "fffff", price: #<BigDecimal:7f88834d3510,'0.999E1',18(18)>,
+ description: "sfdsfds", created_at: "2014-07-31 23:34:26", updated_at: "2014-07-31 23:34:26">]>
+irb(main):022:0>
