@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="wrap">
+
+<%= render 'header' %>
 
 <%= yield %>
+
+<%= render 'footer' %>
+
+</div>
 
 </body>
 </html>

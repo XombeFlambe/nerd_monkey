@@ -1,29 +1,33 @@
-<h1>Listing menu_items</h1>
+<div class="box">
+    <div class="box-hd">
+        <h1>Our Delicious Menu Items</h1>
+    </div>
+    <div class="box-bd">
+        <table>
+          <thead>
+            <tr>
+              <th>Food Thing</th>
+              <th>Coinage</th>
+              <th>What's that about?</th>
+              <th>On Sale?</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @menu_items.each do |menu_item| %>
-      <tr>
-        <td><%= menu_item.title %></td>
-        <td><%= menu_item.price %></td>
-        <td><%= menu_item.description %></td>
-        <td><%= link_to 'Show', menu_item %></td>
-        <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
-        <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Menu item', new_menu_item_path %>
+          <tbody>
+            <% @menu_items.each do |menu_item| %>
+              <tr>
+                <td><%= menu_item.title %></td>
+                <td>$<%= menu_item.price %></td>
+                <td><%= menu_item.description %></td>
+                <td><%= menu_item.onsale? ? 'Hell Yeah' : 'Hell No' %></td>
+                <td><%= link_to 'View', menu_item %></td>
+                <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
+                <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= link_to 'Invent New Food Thing', new_menu_item_path, :class => 'btn' %>
+    </div>
+</div>

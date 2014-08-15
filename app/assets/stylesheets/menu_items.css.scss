@@ -1,3 +1,92 @@
 // Place all the styles related to the MenuItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+background: #bc7125; /* Old browsers */
+background: -moz-linear-gradient(left,  #bc7125 0%, #efd22d 30%, #efd22d 70%, #bc7125 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bc7125), color-stop(30%,#efd22d), color-stop(70%,#efd22d), color-stop(100%,#bc7125)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #bc7125 0%,#efd22d 30%,#efd22d 70%,#bc7125 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #bc7125 0%,#efd22d 30%,#efd22d 70%,#bc7125 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #bc7125 0%,#efd22d 30%,#efd22d 70%,#bc7125 100%); /* IE10+ */
+background: linear-gradient(to right,  #bc7125 0%,#efd22d 30%,#efd22d 70%,#bc7125 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc7125', endColorstr='#bc7125',GradientType=1 ); /* IE6-9 */
+}
+
+.wrap {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.box {
+    padding: 20px;
+    background: rgba(255,255,255,.5);
+    border-radius: 20px;
+}
+
+.box table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box th {
+    text-align: left;
+}
+
+input[type="text"],
+textarea {
+    width: 260px;
+    padding: 10px;
+    border: none;
+    border: 1px solid #46b0bd;
+    border-radius: 10px;
+}
+
+.btn,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    background: #BC7125;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+    background: #BA5D00;
+}
+
+.btn:visited {
+    color: #ffffff;
+}
+
+.footer {
+    display: table;
+    margin: 20px auto;
+}
+
+.footer > * {
+    display: table-cell;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    width: 100px;
+}
+
+.footer-logo img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.footer-legal {
+    vertical-align: middle;
+}

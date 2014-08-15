@@ -1,19 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="box">
+    <div class="box-hd">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @menu_item.title %>
-</p>
+        <p>
+          <h1><%= @menu_item.title %></h1>
+        </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @menu_item.price %>
-</p>
+        <p>
+          <strong>Price:</strong>
+          $<%= @menu_item.price %>
+        </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @menu_item.description %>
-</p>
+        <p>
+          <strong>Description:</strong>
+          <%= @menu_item.description %>
+        </p>
 
-<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
-<%= link_to 'Back', menu_items_path %>
+        <%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
+        <%= link_to 'Back', menu_items_path %>
+    </div>
+</div>
