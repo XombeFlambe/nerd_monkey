@@ -6,8 +6,8 @@
         <table>
           <thead>
             <tr>
-              <th>Food Thing</th>
-              <th>Coinage</th>
+              <th><%= link_to 'Food Thing', menu_items_path(sort: 'title ' + sort_dir) %></th>
+              <th><%= link_to 'Coinage', menu_items_path(sort: 'price ' + sort_dir) %></th>
               <th>What's that about?</th>
               <th>On Sale?</th>
               <th colspan="3"></th>
